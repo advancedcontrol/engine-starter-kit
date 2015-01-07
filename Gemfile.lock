@@ -1,0 +1,362 @@
+GIT
+  remote: https://github.com/advancedcontrol/doorkeeper-couchbase.git
+  revision: 4bed895d410d65bec95478e0535fcba991ebd745
+  specs:
+    doorkeeper-couchbase (0.1.0)
+
+GIT
+  remote: https://github.com/advancedcontrol/omniauth-openid.git
+  revision: 763f48d387f1e836215519e9e1414f996bd18437
+  specs:
+    omniauth-openid (1.0.2)
+      omniauth (~> 1.0)
+      rack-openid (~> 1.4.2)
+
+GIT
+  remote: https://github.com/advancedcontrol/omniauth-saml.git
+  revision: de36e448e5119540332d69792ba6c09b141bbc45
+  specs:
+    omniauth-saml (1.1.0)
+      omniauth (>= 1.2)
+      ruby-saml (>= 0.7.3)
+
+GIT
+  remote: https://github.com/stakach/couchbase-ruby-model
+  revision: 9fb021091227431a154529bf9ba0dd3a7bb36522
+  specs:
+    couchbase-model (0.5.3)
+      activemodel
+      couchbase (~> 1.3.3)
+
+PATH
+  remote: ../coauth
+  specs:
+    coauth (0.0.2)
+      email_validator
+      fog
+      omniauth-identity
+      scrypt
+
+PATH
+  remote: ../control
+  specs:
+    orchestrator (1.0.2)
+      addressable
+      algorithms
+      co-elastic-query
+      couchbase-id
+      elasticsearch
+      libuv
+      rails
+      rake
+      systemu
+      uv-rays
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    CFPropertyList (2.2.8)
+    actionmailer (4.2.0)
+      actionpack (= 4.2.0)
+      actionview (= 4.2.0)
+      activejob (= 4.2.0)
+      mail (~> 2.5, >= 2.5.4)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+    actionpack (4.2.0)
+      actionview (= 4.2.0)
+      activesupport (= 4.2.0)
+      rack (~> 1.6.0)
+      rack-test (~> 0.6.2)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.1)
+    actionview (4.2.0)
+      activesupport (= 4.2.0)
+      builder (~> 3.1)
+      erubis (~> 2.7.0)
+      rails-dom-testing (~> 1.0, >= 1.0.5)
+      rails-html-sanitizer (~> 1.0, >= 1.0.1)
+    activejob (4.2.0)
+      activesupport (= 4.2.0)
+      globalid (>= 0.3.0)
+    activemodel (4.2.0)
+      activesupport (= 4.2.0)
+      builder (~> 3.1)
+    activerecord (4.2.0)
+      activemodel (= 4.2.0)
+      activesupport (= 4.2.0)
+      arel (~> 6.0)
+    activesupport (4.2.0)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    addressable (2.3.6)
+    algorithms (0.6.1)
+    arel (6.0.0)
+    bcrypt (3.1.9-x86-mingw32)
+    bcrypt-ruby (3.1.5-x86-mingw32)
+      bcrypt (>= 3.1.3)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
+    bisect (0.1)
+    builder (3.2.2)
+    co-elastic-query (0.0.3)
+      elasticsearch (~> 1.0.5)
+    columnize (0.9.0)
+    connection_pool (2.1.0)
+    cookiejar (0.3.2)
+    couchbase (1.3.10-x86-mingw32)
+      connection_pool (>= 1.0.0, <= 3.0.0)
+      multi_json (~> 1.0)
+      yaji (~> 0.3, >= 0.3.2)
+    couchbase-id (1.0.12)
+      radix
+    debug_inspector (0.0.2)
+    debugger (1.6.8)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.3.5)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.3.7)
+    doorkeeper (2.0.1)
+      railties (>= 3.1)
+    elasticsearch (1.0.6)
+      elasticsearch-api (= 1.0.6)
+      elasticsearch-transport (= 1.0.6)
+    elasticsearch-api (1.0.6)
+      multi_json
+    elasticsearch-transport (1.0.6)
+      faraday
+      multi_json
+    email_validator (1.5.0)
+      activemodel
+    erubis (2.7.0)
+    excon (0.42.1)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    ffi (1.9.6-x86-mingw32)
+    ffi-compiler (0.1.3)
+      ffi (>= 1.0.0)
+      rake
+    fission (0.5.0)
+      CFPropertyList (~> 2.2)
+    fog (1.26.0)
+      fog-atmos
+      fog-brightbox (~> 0.4)
+      fog-core (~> 1.27, >= 1.27.1)
+      fog-ecloud
+      fog-json
+      fog-profitbricks
+      fog-radosgw (>= 0.0.2)
+      fog-sakuracloud (>= 0.0.4)
+      fog-softlayer
+      fog-storm_on_demand
+      fog-terremark
+      fog-vmfusion
+      fog-voxel
+      fog-xml (~> 0.1.1)
+      ipaddress (~> 0.5)
+      nokogiri (~> 1.5, >= 1.5.11)
+    fog-atmos (0.1.0)
+      fog-core
+      fog-xml
+    fog-brightbox (0.7.1)
+      fog-core (~> 1.22)
+      fog-json
+      inflecto (~> 0.0.2)
+    fog-core (1.27.2)
+      builder
+      excon (~> 0.38)
+      formatador (~> 0.2)
+      mime-types
+      net-scp (~> 1.1)
+      net-ssh (>= 2.1.3)
+    fog-ecloud (0.0.2)
+      fog-core
+      fog-xml
+    fog-json (1.0.0)
+      multi_json (~> 1.0)
+    fog-profitbricks (0.0.1)
+      fog-core
+      fog-xml
+      nokogiri
+    fog-radosgw (0.0.3)
+      fog-core (>= 1.21.0)
+      fog-json
+      fog-xml (>= 0.0.1)
+    fog-sakuracloud (0.1.1)
+      fog-core
+      fog-json
+    fog-softlayer (0.3.26)
+      fog-core
+      fog-json
+    fog-storm_on_demand (0.1.0)
+      fog-core
+      fog-json
+    fog-terremark (0.0.3)
+      fog-core
+      fog-xml
+    fog-vmfusion (0.0.1)
+      fission
+      fog-core
+    fog-voxel (0.0.2)
+      fog-core
+      fog-xml
+    fog-xml (0.1.1)
+      fog-core
+      nokogiri (~> 1.5, >= 1.5.11)
+    formatador (0.2.5)
+    globalid (0.3.0)
+      activesupport (>= 4.1.0)
+    hashie (3.3.2)
+    hike (1.2.3)
+    http-parser (1.0.5)
+      ffi-compiler (>= 0.0.2)
+      rake
+    i18n (0.7.0)
+    inflecto (0.0.2)
+    ipaddress (0.8.0)
+    jbuilder (2.2.6)
+      activesupport (>= 3.0.0, < 5)
+      multi_json (~> 1.2)
+    json (1.8.1)
+    libuv (1.1.1)
+      ffi (>= 1.9)
+      ruby-tls (>= 1.0.3)
+      thread_safe
+    loofah (2.0.1)
+      nokogiri (>= 1.5.9)
+    macaddr (1.7.1)
+      systemu (~> 2.6.2)
+    mail (2.6.3)
+      mime-types (>= 1.16, < 3)
+    mime-types (2.4.3)
+    mini_portile (0.6.2)
+    minitest (5.5.0)
+    multi_json (1.10.1)
+    multipart-post (2.0.0)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.9.1)
+    nokogiri (1.6.5-x86-mingw32)
+      mini_portile (~> 0.6.0)
+    omniauth (1.2.2)
+      hashie (>= 1.2, < 4)
+      rack (~> 1.0)
+    omniauth-identity (1.1.1)
+      bcrypt-ruby (~> 3.0)
+      omniauth (~> 1.0)
+    rack (1.6.0)
+    rack-openid (1.4.2)
+      rack (>= 1.1.0)
+      ruby-openid (>= 2.1.8)
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    radix (2.2.0)
+    rails (4.2.0)
+      actionmailer (= 4.2.0)
+      actionpack (= 4.2.0)
+      actionview (= 4.2.0)
+      activejob (= 4.2.0)
+      activemodel (= 4.2.0)
+      activerecord (= 4.2.0)
+      activesupport (= 4.2.0)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.2.0)
+      sprockets-rails
+    rails-deprecated_sanitizer (1.0.3)
+      activesupport (>= 4.2.0.alpha)
+    rails-dom-testing (1.0.5)
+      activesupport (>= 4.2.0.beta, < 5.0)
+      nokogiri (~> 1.6.0)
+      rails-deprecated_sanitizer (>= 1.0.1)
+    rails-html-sanitizer (1.0.1)
+      loofah (~> 2.0)
+    railties (4.2.0)
+      actionpack (= 4.2.0)
+      activesupport (= 4.2.0)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+    rake (10.4.2)
+    rdoc (4.2.0)
+      json (~> 1.4)
+    ruby-openid (2.6.0)
+    ruby-saml (0.8.1)
+      nokogiri (>= 1.5.0)
+      uuid (~> 2.3)
+    ruby-tls (1.0.3)
+      ffi-compiler (>= 0.0.2)
+      rake
+    scrypt (2.0.0)
+      ffi-compiler (>= 0.0.2)
+      rake
+    sdoc (0.4.1)
+      json (~> 1.7, >= 1.7.7)
+      rdoc (~> 4.0)
+    spider-gazelle (1.0.3)
+      http-parser
+      libuv (>= 1.0.0)
+      rack (>= 1.0.0)
+      radix
+      rake
+      thread_safe
+      websocket-driver
+    sprockets (2.12.3)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    sprockets-rails (2.2.2)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      sprockets (>= 2.8, < 4.0)
+    systemu (2.6.4)
+    thor (0.19.1)
+    thread_safe (0.3.4)
+    tilt (1.4.1)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    tzinfo-data (1.2014.10)
+      tzinfo (>= 1.0.0)
+    uuid (2.3.7)
+      macaddr (~> 1.0)
+    uv-rays (1.0.4)
+      addressable
+      bisect
+      cookiejar
+      http-parser (>= 1.0.4)
+      ipaddress
+      libuv (>= 0.11.20)
+      tzinfo
+    web-console (2.0.0)
+      activemodel (~> 4.0)
+      binding_of_caller (>= 0.7.2)
+      railties (~> 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
+    websocket-driver (0.5.1)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.1)
+    yaji (0.3.5-x86-mingw32)
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  coauth!
+  couchbase
+  couchbase-model!
+  debugger
+  doorkeeper
+  doorkeeper-couchbase!
+  jbuilder (~> 2.0)
+  omniauth-openid!
+  omniauth-saml!
+  orchestrator!
+  racc
+  rails (= 4.2)
+  rubysl
+  sdoc (~> 0.4.0)
+  spider-gazelle
+  tzinfo-data
+  web-console (~> 2.0)
