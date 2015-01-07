@@ -2,8 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2'
-
+gem 'rails', '~> 4.2.0'
 gem 'spider-gazelle'
 
 # Database
@@ -17,12 +16,14 @@ end
 
 #gem 'orchestrator', git: 'https://cotag@bitbucket.org/aca/control.git'
 gem 'orchestrator', path: '../control'
+gem 'aca-device-modules', path: '../aca-device-modules'
 
 
 # Authentication
 gem 'doorkeeper'
 gem 'doorkeeper-couchbase', git: 'https://github.com/advancedcontrol/doorkeeper-couchbase.git'
 gem 'coauth', path: '../coauth'
+
 gem 'omniauth-saml', git: 'https://github.com/advancedcontrol/omniauth-saml.git'
 gem 'omniauth-openid', git: 'https://github.com/advancedcontrol/omniauth-openid.git'
 
@@ -31,6 +32,7 @@ gem 'omniauth-openid', git: 'https://github.com/advancedcontrol/omniauth-openid.
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
@@ -48,3 +50,4 @@ platforms :rbx do
     gem 'rubysl'    # Standard library
     gem 'racc'      # Parser generator
 end
+
