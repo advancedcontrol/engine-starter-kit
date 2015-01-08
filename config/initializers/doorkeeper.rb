@@ -1,6 +1,12 @@
+require 'set'
+
+trustedClients = Set.new(['Cotag', 'ACAEngine'])
+
 Doorkeeper.configure do
     require 'doorkeeper/orm/couchbase'
     orm :couchbase
+
+
     
     # This block will be called to check whether the
     # resource owner is authenticated or not
@@ -8,7 +14,7 @@ Doorkeeper.configure do
         # We use cookies signed instead of session as then we can limit
         # the cookie to particular paths (i.e. /auth)
         cookie = cookies.encrypted[:user]
-        user = User.find_by_id(cookie[:id]) if cookie
+        user = User.find_by_id(cookie['id']) if cookie
         user || redirect_to('/login_required.html')
     end
 
@@ -28,6 +34,12 @@ Doorkeeper.configure do
         admin_authenticator do |routes|
             true
         end
+    end
+
+    # Skip authorization only if the app is owned by us
+    skip_authorization do |resource_owner, client|
+        # NOTE:: This means we need to name our oAuth application CoTag
+        trustedClients.include? client.name
     end
 
     # Access token expiration time (default 2 hours)
