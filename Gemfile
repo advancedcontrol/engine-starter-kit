@@ -44,8 +44,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Rubinius support
-platforms :rbx do
-    gem 'rubysl'    # Standard library
-    gem 'racc'      # Parser generator
-end
+#platforms :rbx do
+#    gem 'rubysl'    # Standard library
+#    gem 'racc'      # Parser generator
+#end
 
