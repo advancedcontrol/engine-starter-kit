@@ -1,5 +1,5 @@
 
-class ApplicationController < ::AcaEngineBase
+class ApplicationController < ::Orchestrator::Base
 
     protected
 
