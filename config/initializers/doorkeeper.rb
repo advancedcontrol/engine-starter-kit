@@ -1,6 +1,6 @@
 require 'set'
 
-trustedClients = Set.new(['Cotag', 'ACAEngine'])
+trustedClients = Set.new(['Cotag', 'AcaEngine'])
 
 Doorkeeper.configure do
     require 'doorkeeper/orm/couchbase'
@@ -53,4 +53,6 @@ Doorkeeper.configure do
     # For more information go to https://github.com/applicake/doorkeeper/wiki/Using-Scopes
     default_scopes  :public
     optional_scopes :admin
+
+    grant_flows %w(authorization_code client_credentials implicit password)
 end
