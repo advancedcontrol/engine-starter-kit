@@ -21,7 +21,12 @@ gem 'aca-device-modules', path: '../aca-device-modules'
 
 
 # Authentication
-gem 'doorkeeper'
+if RUBY_VERSION[0].to_i == 1
+    # Last supported version running on ruby 1.9.3
+    gem 'doorkeeper', '2.1.1'
+else
+    gem 'doorkeeper'
+end
 gem 'doorkeeper-couchbase', git: 'https://github.com/advancedcontrol/doorkeeper-couchbase.git'
 gem 'coauth', path: '../coauth'
 
