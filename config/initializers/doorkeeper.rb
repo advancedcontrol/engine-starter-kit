@@ -38,8 +38,19 @@ Doorkeeper.configure do
 
     # Skip authorization only if the app is owned by us
     skip_authorization do |resource_owner, client|
-        # NOTE:: This means we need to name our oAuth application CoTag
-        trustedClients.include? client.name
+        # NOTE:: Is the URL located on our servers?
+        client.redirect_uri =~ /^http(s)?:\/\/(.+\.)?cotag\.me\/oauth-resp.html$/i || client.application.skip_authorization
+    end
+
+    # username and password authentication for local auth
+    resource_owner_from_credentials do |routes|
+        user_id = User.bucket.get("useremail-#{User.process_email(params[:authority], params[:username])}", {quiet: true})
+        if user_id
+            user = User.find(user_id)
+            if user && user.authenticate(params[:password])
+                user
+            end
+        end
     end
 
     # Access token expiration time (default 2 hours)
@@ -53,6 +64,8 @@ Doorkeeper.configure do
     # For more information go to https://github.com/applicake/doorkeeper/wiki/Using-Scopes
     default_scopes  :public
     optional_scopes :admin
+
+    force_ssl_in_redirect_uri false
 
     grant_flows %w(authorization_code client_credentials implicit password)
 end
