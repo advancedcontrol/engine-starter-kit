@@ -38,8 +38,7 @@ Doorkeeper.configure do
 
     # Skip authorization only if the app is owned by us
     skip_authorization do |resource_owner, client|
-        # NOTE:: Is the URL located on our servers?
-        client.redirect_uri =~ /^http(s)?:\/\/(.+\.)?cotag\.me\/oauth-resp.html$/i || client.application.skip_authorization
+        client.application.skip_authorization
     end
 
     # username and password authentication for local auth

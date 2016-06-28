@@ -32,7 +32,10 @@ gem 'coauth', path: '../coauth'
 
 gem 'omniauth-saml', git: 'https://github.com/advancedcontrol/omniauth-saml.git'
 gem 'omniauth-openid', git: 'https://github.com/advancedcontrol/omniauth-openid.git'
+gem 'nokogiri'
 
+
+gem 'omniauth-google-oauth2'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
