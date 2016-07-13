@@ -41,9 +41,9 @@ class Neets::RpcSignaller
         def on_read(data, *args)
             begin
                 @buffer.extract(data).each do |request|
-                    logger.debug { "recieved request #{data}" }
-                    cmd, request = data.split(' ')
-                    mod.process(@ip, cmd, request)
+                    logger.debug { "recieved request #{request}" }
+                    cmd, value = request.split(' ')
+                    mod.process(@ip, cmd, value)
                 end
             rescue => e
                 logger.print_error(e, "error extracting data from: #{data.inspect} in receive_data callback")
