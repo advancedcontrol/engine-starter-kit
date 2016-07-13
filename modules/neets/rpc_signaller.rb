@@ -42,7 +42,7 @@ class Neets::RpcSignaller
             begin
                 @buffer.extract(data).each do |request|
                     logger.debug { "recieved request #{data}" }
-                    cmd, request = raw.split(' ')
+                    cmd, request = data.split(' ')
                     mod.process(@ip, cmd, request)
                 end
             rescue => e
