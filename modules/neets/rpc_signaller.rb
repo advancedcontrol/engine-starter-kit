@@ -95,7 +95,10 @@ class Neets::RpcSignaller
                 display.power(false)
             when :volume
                 vol = (display[:volume] || 0)
-                if request == 'up'
+
+                # NOTE:: down is up and up is down
+                # This was a work around for incorrect labeling!!!!
+                if request == 'down'
                     display.volume(vol + @volume_increment)
                 else
                     display.volume(vol - @volume_increment)
