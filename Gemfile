@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'uv-rays', '1.3.8'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.2.0'
+gem 'rails', '~> 4.2.7.1'
 gem 'responders', '~> 2.0'  # for responds_with with rails 4.2
-gem 'spider-gazelle', '>= 1.0.0' # web server
+gem 'spider-gazelle', '2.0.4' # web server
 
 # Database
 if RUBY_PLATFORM == 'java'
@@ -17,7 +18,7 @@ end
 
 gem 'couchbase-id'      # Generates our model ids
 gem 'elasticsearch'     # Searchable access to model indexes
-gem 'co-elastic-query'
+gem 'co-elastic-query', '~> 2.0'
 
 
 #gem 'orchestrator', git: 'https://cotag@bitbucket.org/aca/control.git'
@@ -58,3 +59,4 @@ gem 'scrypt'
 #    gem 'racc'      # Parser generator
 #end
 
+gem 'websocket-driver', '0.6.3'
